@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Products</title>
+
+    <link rel="icon" href="" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="">
+
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <!-- your content here... -->
+    {% for product in products %}
+    <div class="product-card" onclick="itemCardOnClick({{ product.id }})">{{ product.name }}</div>
+    {% endfor %}
+    <script type="text/javascript">
+        function itemCardOnClick(product_id) {
+            window.location.href = "/products/" + product_id + "/details/";
+            alert("clicked!!");
+        }
+    </script>
+</body>
+</html>
+

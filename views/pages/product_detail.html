@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Product Detail</title>
+
+    <link rel="icon" href="" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="">
+
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <!-- your content here... -->
+    <div>{{ product.name }}</div>
+    <div>{{ product.description }}</div>
+    <div>{{ product.price }}</div>
+    <form id="add_to_cart" action="/cart/add/" method="post">
+        <div><input type="hidden" name="cart_product_id" value="{{ product.id }}" /></div>
+        <div><input type="number" name="cart_product_quantity" class="text-field" /></div>
+        <div><button type="submit" class="button-submit">Add</button></div>
+    </form>
+    <script src=""></script>
+</body>
+</html>
+
